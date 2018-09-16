@@ -1,23 +1,86 @@
-*{margin: 0; padding: 0;}
-a{text-decoration: none;}
-kbd{border: 1px solid red;width:4em; height: 4em; display: inline-block; text-transform: uppercase; position: relative; }
-kbd > button{position: absolute; right: 0; bottom: 0; display: none; }
-kbd:hover > button{display: inline-block; }
-body{background: grey url(./wall.jpg) no-repeat center center; }
-main{text-align: center; display: flex; justify-content: center; align-items: center; height: 100vh; }
-#main{display: inline-block;; }
-#main> div:nth-child(2){margin-left: -22px; }
-#main> div:nth-child(3){margin-left: -80px; }
-.wrapper{
-	background: rgba(255,255,255,0.2);
-	border-radius: 10px;
+*{	
+	margin: 0;
+	padding: 0;
 }
-.key{width: 50px; height: 40px; background: linear-gradient(to bottom, #292929 0%,#111111 100%); 
-	border: 1px solid #373737; color: #C5C5C5; border-radius: 6px; 
-	box-shadow: 0 0 0 1px #1A1B1C, 0 0 0 2px #1F2020, 0 3px 0 2px #080808; 
-	position: relative;
-	font-size: 16px; font-family: Helvetica;}
-.row{margin: 20px; }
-.row .key{margin: 0 10px; }
-.key img{width: 16px; height: 16px; position: absolute; left: 4px; bottom: 2px;}
-.key .text{position: absolute; left: 4px; top: 2px; }
+body{
+	padding: 100px 0;
+    background-image: url(./img/alum.png);
+    background-size:cover;
+}
+form{
+	padding-bottom: 50px;
+	text-align: center;
+}
+input{
+	display: inline-block;
+	width: 300px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	border: none;
+	border-bottom: 3px solid #050505;
+	box-sizing: border-box;
+	background: transparent;
+}
+input:focus{
+	outline: none;
+}
+form a{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	font-size: 18px;
+	font-family: "Microsoft YaHei", "微软雅黑";
+	text-decoration: none;
+	border-radius: 8px;
+	background: #050505;
+}
+form .baidu{
+	margin: 0 10px;
+}
+form a:hover{
+	cursor: pointer;
+}
+div{
+	margin: 0 auto;
+	width: 850px;
+	text-align: center;
+}
+kbd{
+	display: inline-block;
+	margin: 6px;
+	width: 71px;
+	height: 69px;
+	color: #fff;
+	font-size: 25px;
+	line-height: 69px;
+	font-weight: 600;
+	background: #050505;
+	border-radius: 8px;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	text-transform: uppercase;
+}
+@font-face {
+    font-family: keyboard;
+    src: url('./fonts/keyboard.otf') format('opentype');
+  }
+kbd:hover{
+    cursor: pointer;
+    background-color: #e6117b;
+	backface-visibility: hidden;
+    perspective: 1000px;
+    transition: background-color .3s linear;
+}
+.description{
+	margin: 50px auto;
+	width: 300px;
+	color: #444;
+	font-size: 14px;
+	font-family: "Microsoft YaHei", "微软雅黑";
+}
+.description span{
+	font-weight: bold;
+	color: #222;
+}
